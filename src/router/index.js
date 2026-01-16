@@ -9,7 +9,9 @@ const router = createRouter({
     {
       path: '/perfil',
       component: () => import('@/view/PerfilView.vue'),
-      
+      meta: {
+        requiresAuth: true,
+      },
     },
   ],
 })
