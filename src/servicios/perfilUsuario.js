@@ -14,7 +14,7 @@ import {
 export const guardarPerfilUsuario = async (usuarioID, datosPerfil) => {
   try {
     //'usuarios' - nombre de la tabla, usuarioID
-    const docRef = doc(db, 'usuarios', usuarioID)
+    const docRef = doc(db, 'favoritos_personajes', usuarioID)
 
     // una copia de objeto datosPerfil
     // const perfilCompleto = {
@@ -24,13 +24,13 @@ export const guardarPerfilUsuario = async (usuarioID, datosPerfil) => {
     await setDoc(docRef, datosPerfil)
     return {
       ok: true,
-      mensaje: 'Perfil de suario actualizado correctamente ☑️',
+      mensaje: 'Favoritos de usuario actualizado correctamente ☑️',
     }
   } catch (error) {
     console.log('Ha habido un problema ❌', error)
     return {
       ok: false,
-      error: error.message,
+      mensaje: error.message,
     }
   }
 }
@@ -39,13 +39,13 @@ export const guardarPerfilUsuario = async (usuarioID, datosPerfil) => {
 export const obtenerPerfilUsuario = async (usuarioID) => {
   try {
     // de que tabla vas a buscar
-    const docRef = doc(db, 'usuarios', usuarioID)
+    const docRef = doc(db, 'favoritos_personajes', usuarioID)
 
     const docSnap = await getDoc(docRef)
     if (docSnap.exists()) {
       return {
         ok: true,
-        mensaje: 'Perfil de usuario obtenido correctamente ☑️',
+        mensaje: 'Favoritos de usuario obtenido correctamente ☑️',
         perfil: { id: docSnap.id, ...docSnap.data() },
       }
     }
@@ -53,7 +53,7 @@ export const obtenerPerfilUsuario = async (usuarioID) => {
     console.log('Ha habido un problema ❌', error)
     return {
       ok: false,
-      error: error.message,
+      mensaje: error.message,
     }
   }
 }
