@@ -4,9 +4,9 @@
       <div class="flex flex-col content-center justify-center gap-4">
         <div class="flex flex-row items-end justify-between flex-wrap gap-[1rem]">
           <h1 class="text-4xl md:text-5xl font-extrabold text-lime-400 drop-shadow-[0_0_25px_rgba(163,230,53,0.5)] ">Rick and Morty</h1>
-          <h2 class="text-xl font-semibold text-cyan-300 font-['Bebas_Neue']">personajes</h2>
+          <h2 class="text-xl font-semibold text-cyan-300 font-['Bebas_Neue'] tracking-widest">personajes</h2>
         </div>
-        <p class="text-slate-300 leading-relaxed font-['Shadows_Into_Light'] ">Registrate o inicia sessión para crear tu collección de personajes favoritos.</p>
+        <p class="text-slate-300 leading-relaxed font-['Shadows_Into_Light'] tracking-widest">Registrate o inicia sessión para crear tu collección de personajes favoritos.</p>
       </div>
       <router-link to="/perfil" v-if="usuario" class="px-6 py-3 rounded-xl font-semibold text-lime-300
          bg-[#00393d] border border-lime-400/40

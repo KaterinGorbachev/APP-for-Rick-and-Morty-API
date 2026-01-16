@@ -73,7 +73,7 @@
         <div class="flex flex-row justify-between w-full">
           <div class="flex flex-col gap-4">
             <h1 class="text-4xl md:text-5xl font-extrabold text-lime-400 drop-shadow-[0_0_25px_rgba(163,230,53,0.5)]">Registrate</h1>
-            <p class="text-slate-300 leading-relaxed">Despues de registrarte verifica el email en tu correo electronico para crear tu colleción de personajes. Nuestro mensaje puede estar en el spam.</p>
+            <p class="text-slate-300 leading-relaxed font-['Shadows_Into_Light'] tracking-widest">Despues de registrarte verifica el email en tu correo electronico para crear tu colleción de personajes. Nuestro mensaje puede estar en el spam.</p>
 
           </div>
           <router-link to="/" class="px-6 py-3 rounded-xl font-semibold text-lime-300
