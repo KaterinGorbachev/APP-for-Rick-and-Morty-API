@@ -8,13 +8,13 @@
       <p>Estado {{ state }}</p>
       <p>Genero {{ sex }}</p>
     </div>
-    <button @click="emits('action-onclick')">{{ label }}</button>
+    <button @click="handleClick" :id="id">{{ label }}</button>
   </div>
 
 </template>
 
 <script setup>
-  defineProps({
+  const props = defineProps({
     img: {
       type: String,
     },
@@ -30,9 +30,15 @@
     label: {
       type: String,
     },
+    id: {
+      type: Number
+    }
   })
 
   const emits = defineEmits(['action-onclick'])
+  function handleClick() {
+    emits('action-onclick', props)
+  }
 
 </script>
 
