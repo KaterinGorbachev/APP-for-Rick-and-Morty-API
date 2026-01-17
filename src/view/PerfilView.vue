@@ -10,14 +10,15 @@
       <h2 class="text-3xl font-semibold text-[#00615f] ">tu collección</h2>
     </div>
     <div class="flex flex-row gap-1.5 items-center">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-5 w-5" ><path d="M48 64c-26.5 0-48 21.5-48 48 0 15.1 7.1 29.3 19.2 38.4l208 156c17.1 12.8 40.5 12.8 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48L48 64zM0 196L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-188-198.4 148.8c-34.1 25.6-81.1 25.6-115.2 0L0 196z" fill="currentColor"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-5 w-5 text-[#00615f]" ><path d="M48 64c-26.5 0-48 21.5-48 48 0 15.1 7.1 29.3 19.2 38.4l208 156c17.1 12.8 40.5 12.8 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48L48 64zM0 196L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-188-198.4 148.8c-34.1 25.6-81.1 25.6-115.2 0L0 196z" fill="currentColor"/></svg>
       <p class="text-xl font-semibold text-[#003d3c] ">{{ usuario?.email }}</p>
     </div>
 
 
-    <button @click="logoutUser" class="rounded-md border border-slate-300 py-2 px-4 text-start text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none cursor-pointer w-[200px]" >Log out</button>
-    <p v-if="!isVerified">
-      Email no está verificado. Verificalo en tu email. Nuestro mensaje puede estar en Spam.
+    <button @click="logoutUser" class="rounded-xl border border-slate-300 py-2 px-4 text-start text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-lime-300 hover:bg-slate-800
+   hover:border-lime-300 focus:text-lime-300 focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-lime-300 active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none cursor-pointer w-[200px] font-['Bebas_Neue'] tracking-widest" >Log out</button>
+    <p v-if="!isVerified" class="text-black text-sm italic">
+      El email no está verificado. Verifica tu correo electrónico para crear la colección. Nuestro mensaje puede estar en spam.
     </p>
 
     <div v-if="favorites.length" class="flex w-full flex-wrap gap-[1rem]">
@@ -34,11 +35,11 @@
         @action-onclick="borrarFavoritos"
       />
     </div>
-    <div v-if="!favorites.length" class="flex flex-col gap-8">
-      <p class="text-xl font-semibold text-[#000000] font-['Shadows_Into_Light'] tracking-widest" >
+    <div v-if="!favorites.length" class="flex flex-col items-start justify-start gap-2 pt-9">
+      <p class="text-xl font-semibold text-[#55009f] font-['Shadows_Into_Light'] tracking-widest" >
       No tienes personajes favoritos aún.
       </p>
-      <img src="/public/undraw_stars_5pgw.svg" alt="space" class="h-48 w-96">
+      <img src="/public/undraw_stars_5pgw.svg" alt="space" class="h-48 ">
 
     </div >
 
